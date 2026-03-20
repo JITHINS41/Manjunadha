@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60" role="img" aria-label="Manjunatha Well Ring Works logo">
+  <defs>
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#004B9B"/>
+      <stop offset="100%" stop-color="#0D62C7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" font-family="Montserrat, Arial, sans-serif">
+    <!-- Diamond icon -->
+    <g transform="translate(170 4) scale(0.9)" stroke="#0D62C7" stroke-width="2" fill="#3C89E6">
+      <path d="M18 0L34 6l6 16-14 22H12L-2 22l6-16z"/>
+      <path d="M18 0l6 22-14 22M34 6L12 44M6 6l12 38" stroke-linecap="round"/>
+    </g>
+    <!-- Wordmark -->
+    <text x="0" y="30" font-size="30" font-weight="700" fill="url(#gradBlue)">Manjunatha</text>
+    <text x="2" y="54" font-size="18" font-weight="600" fill="#0D62C7">Well Ring Works</text>
+  </g>
+</svg>

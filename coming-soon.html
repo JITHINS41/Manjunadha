@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manjunatha Well Ring Works — Coming Soon</title>
+  <meta name="description" content="A refreshed Manjunatha Well Ring Works experience is coming soon. Stay tuned!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #080817;
+      --bg-light: #1e1a40;
+      --accent: #facc15;
+      --text: #f8fafc;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      font-family: 'Space Grotesk', sans-serif;
+      background: radial-gradient(circle at top, rgba(250, 204, 21, 0.15), transparent 45%),
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.25), transparent 35%),
+        linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 3rem 3rem;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      width: min(640px, 100%);
+      padding: 3rem;
+      border-radius: 32px;
+      background: rgba(6, 6, 16, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(18px);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 3.25rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      margin-bottom: 2rem;
+      color: rgba(248, 250, 252, 0.8);
+      font-size: 1.1rem;
+      max-width: 38ch;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .countdown div {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .countdown span {
+      display: block;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact {
+      font-size: 0.95rem;
+      color: rgba(248, 250, 252, 0.75);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 150ms ease;
+    }
+
+    .contact a:hover {
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 520px) {
+      main {
+        padding: 2rem;
+      }
+
+
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p style="text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.85rem; color: rgba(248, 250, 252, 0.6); margin-bottom: 0.8rem;">
+      Manjunatha Well Ring Works
+    </p>
+    <h1>Something concrete is taking shape.</h1>
+    <p class="tagline">We are crafting a refreshed digital experience to showcase our well rings, tanks, and installation services. Check back soon for the grand reveal.</p>
+
+    <section class="countdown" aria-label="Launch countdown" id="countdown">
+      <div>
+        <span id="days">00</span>
+        Days
+      </div>
+      <div>
+        <span id="hours">00</span>
+        Hours
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        Minutes
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        Seconds
+      </div>
+    </section>
+
+    <p class="contact">
+      Need to reach us sooner? Call <a href="tel:+918086545025">+91 8086545025</a> or email <a href="mailto:info@manjunadha.com">info@manjunadha.com</a>.
+    </p>
+  </main>
+
+  <script>
+    (function countdownTimer() {
+      const dayEl = document.getElementById('days');
+      const hourEl = document.getElementById('hours');
+      const minuteEl = document.getElementById('minutes');
+      const secondEl = document.getElementById('seconds');
+
+      const targetTimestamp = new Date('2026-01-15T00:00:00+05:30').getTime();
+      const fallbackCycleMs = 1000 * 60 * 60 * 24 * 30; // 30-day loop if target already passed
+      const firstCycleDuration = targetTimestamp - Date.now();
+      const cycleDurationMs = firstCycleDuration > 0 ? firstCycleDuration : fallbackCycleMs;
+      let activeTarget = firstCycleDuration > 0 ? targetTimestamp : Date.now() + fallbackCycleMs;
+
+      function tick() {
+        const now = Date.now();
+        let remaining = activeTarget - now;
+
+        if (remaining <= 0) {
+          activeTarget = now + cycleDurationMs;
+          remaining = activeTarget - now;
+        }
+
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        dayEl.textContent = String(days).padStart(2, '0');
+        hourEl.textContent = String(hours).padStart(2, '0');
+        minuteEl.textContent = String(minutes).padStart(2, '0');
+        secondEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
