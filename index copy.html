@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manjunatha Well Ring Works</title>
+  <meta name="description" content="Manjunatha Well Ring Works - Well Ring, Water Tank, Wastage Tank, Septic Tank" />
+  <!-- Local offline Tailwind script -->
+  <script src="assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#e8f2ff',
+              100: '#cddff9',
+              200: '#9fc2f2',
+              300: '#6fa9ef',
+              400: '#3c89e6',
+              500: '#0d62c7',
+              600: '#0055b0',
+              700: '#004b9b',
+              800: '#003e82',
+              900: '#002c5c'
+            },
+            accent: '#00b5c7'
+          }
+        }
+      }
+    };
+  </script>
+  <script>
+    (function () {
+      var storageKey = 'ps-theme-preference';
+      var root = document.documentElement;
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      try {
+        var stored = localStorage.getItem(storageKey);
+        if (stored === 'dark' || (stored === null && prefersDark)) {
+          root.classList.add('dark');
+        }
+        if (stored === 'light') {
+          root.classList.remove('dark');
+        }
+      } catch (err) {
+        if (prefersDark) {
+          root.classList.add('dark');
+        }
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    html.dark {
+      color-scheme: dark;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    html.dark body {
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+
+    html.dark .bg-white {
+      background-color: #1f2937 !important;
+    }
+
+    html.dark .bg-white\/80 {
+      background-color: rgba(15, 23, 42, 0.85) !important;
+    }
+
+    html.dark .bg-gray-50 {
+      background-color: #0f172a !important;
+    }
+
+    html.dark .bg-gray-900 {
+      background-color: #020617 !important;
+    }
+
+    html.dark .bg-gray-800 {
+      background-color: #0f172a !important;
+    }
+
+    html.dark .text-gray-900 {
+      color: #f8fafc !important;
+    }
+
+    html.dark .text-gray-800 {
+      color: #f1f5f9 !important;
+    }
+
+    html.dark .text-gray-700 {
+      color: #e2e8f0 !important;
+    }
+
+    html.dark .text-gray-600 {
+      color: #cbd5f5 !important;
+    }
+
+    html.dark .text-gray-500 {
+      color: #a5b4fc !important;
+    }
+
+    html.dark .text-gray-400 {
+      color: #94a3b8 !important;
+    }
+
+    html.dark .text-gray-300 {
+      color: #cbd5f5 !important;
+    }
+
+    html.dark .border-gray-200 {
+      border-color: #1f2937 !important;
+    }
+
+    html.dark .border-gray-300 {
+      border-color: #273548 !important;
+    }
+
+    html.dark .border-gray-700 {
+      border-color: #334155 !important;
+    }
+
+    html.dark .border-gray-800 {
+      border-color: #1e293b !important;
+    }
+
+    html.dark .bg-brand-50 {
+      background-color: rgba(0, 181, 199, 0.18) !important;
+    }
+
+    html.dark .text-brand-700,
+    html.dark .text-brand-600 {
+      color: #5de0e6 !important;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 transition-colors duration-300 ease-out dark:bg-slate-900 dark:text-slate-100">
+  <!-- Top Info Bar (scrolls away, not sticky) -->
+  <div class="w-full bg-brand-700 text-white text-sm">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-3 py-2">
+      <div class="flex items-center flex-wrap gap-4">
+        <span class="flex items-center gap-1 text-xs font-semibold tracking-wide text-brand-100">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z" />
+          </svg>
+          <span>GONIBEEDU, MUDIGERE, CHIKKAMANGALURU</span>
+        </span>
+        <span class="hidden lg:inline-block h-4 w-px bg-white/40"></span>
+        <a href="mailto:info@manjunadha.com" class="flex items-center gap-1 hover:text-brand-100 transition-colors"
+          aria-label="Email info@manjunadha.com">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25h15a2.25 2.25 0 0 0 2.25-2.25V6.75m-19.5 0A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25m-19.5 0l9.435 6.623a1.125 1.125 0 0 0 1.28 0L21.75 6.75" />
+          </svg>
+          <span class="select-all">info@manjunadha.com</span>
+        </a>
+        <span class="hidden sm:inline-block h-4 w-px bg-white/40"></span>
+        <div class="flex items-center gap-4">
+          <a href="tel:+918086545025" class="flex items-center gap-1 hover:text-brand-100 transition-colors"
+            aria-label="Call +91 8086545025">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 4.5c0-.621.504-1.125 1.125-1.125h3.084c.489 0 .91.324 1.04.792l1.103 4.145a1.125 1.125 0 0 1-.524 1.255l-2.317 1.39a11.48 11.48 0 0 0 5.31 5.31l1.39-2.317a1.125 1.125 0 0 1 1.255-.524l4.145 1.102c.468.13.792.551.792 1.04v3.084c0 .621-.504 1.125-1.125 1.125H18.75C10.55 21.375 2.625 13.45 2.625 5.25V4.5z" />
+            </svg>
+            <span class="select-all">+91 8086545025</span>
+          </a>
+          <a href="tel:+918075520472" class="flex items-center gap-1 hover:text-brand-100 transition-colors"
+            aria-label="Call +91 8075520472">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 4.5c0-.621.504-1.125 1.125-1.125h3.084c.489 0 .91.324 1.04.792l1.103 4.145a1.125 1.125 0 0 1-.524 1.255l-2.317 1.39a11.48 11.48 0 0 0 5.31 5.31l1.39-2.317a1.125 1.125 0 0 1 1.255-.524l4.145 1.102c.468.13.792.551.792 1.04v3.084c0 .621-.504 1.125-1.125 1.125H18.75C10.55 21.375 2.625 13.45 2.625 5.25V4.5z" />
+            </svg>
+            <span class="select-all">+91 8075520472</span>
+          </a>
+        </div>
+      </div>
+      <div class="text-white/80 text-xs sm:text-sm">We undertake ring installation work.</div>
+    </div>
+  </div>
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200 dark:bg-slate-900/80 dark:border-slate-700">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img src="assets/img/logo.png" alt="Manjunatha Well Ring Works logo" class="h-12 w-auto" />
+          <span class="sr-only">Manjunatha Well Ring Works</span>
+        </a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8">
+          <li><a href="#home"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">Home</a></li>
+          <li><a href="#about"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">About</a></li>
+          <li><a href="#services"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">Services</a>
+          </li>
+          <li><a href="#gallery"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">Gallery</a></li>
+          <li><a href="#projects"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">Projects</a>
+          </li>
+          <li><a href="#contact"
+              class="nav-link text-sm font-medium text-gray-700 hover:text-brand-700 transition-colors">Contact</a></li>
+        </ul>
+        <!-- CTA + Mobile Button -->
+        <div class="flex items-center gap-4">
+          <button type="button" data-theme-toggle aria-pressed="false"
+            class="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800">
+            <span class="sr-only">Toggle color theme</span>
+            <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" class="hidden w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 4.5V3m0 18v-1.5m7.5-7.5H21M3 12h1.5m13.091 6.091l1.061 1.061M4.348 4.348l1.06 1.06m0 13.284l-1.06 1.06m13.284-13.284l1.06-1.06M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <svg data-theme-icon="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+            </svg>
+          </button>
+          <a href="#quote"
+            class="hidden md:inline-block bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors">Get
+            Quote</a>
+          <button id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false"
+            class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+            <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu Panel -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200">
+        <ul class="py-4 space-y-1">
+          <li><a href="#home"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Home</a>
+          </li>
+          <li><a href="#services"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Services</a>
+          </li>
+          <li><a href="#gallery"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Gallery</a>
+          </li>
+          <li><a href="#projects"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Projects</a>
+          </li>
+          <li><a href="#about"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">About</a>
+          </li>
+          <li><a href="#contact"
+              class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Contact</a>
+          </li>
+          <li><a href="#quote"
+              class="mt-2 mx-3 block text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2 rounded-md shadow-sm transition-colors">Get
+              Quote</a></li>
+          <li class="px-3">
+            <button type="button" data-theme-toggle aria-pressed="false"
+              class="w-full flex items-center justify-center gap-2 rounded-md border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800">
+              <span>Toggle Theme</span>
+              <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" class="hidden w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 4.5V3m0 18v-1.5m7.5-7.5H21M3 12h1.5m13.091 6.091l1.061 1.061M4.348 4.348l1.06 1.06m0 13.284l-1.06 1.06m13.284-13.284l1.06-1.06M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <svg data-theme-icon="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Carousel -->
+  <section id="home" class="relative" role="region" aria-label="Featured highlights">
+    <div id="heroCarousel" class="relative h-[60vh] sm:h-[70vh] overflow-hidden">
+      <!-- Slides -->
+      <div class="absolute inset-0 flex transition-transform duration-700" data-carousel-track>
+        <!-- Slide 1: Well Ring -->
+        <div class="relative w-full shrink-0 h-full" data-carousel-slide aria-label="Well Ring Solutions"
+          aria-hidden="false">
+          <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('assets/img/well_ring_solutions.png');"></div>
+          <div class="absolute inset-0 bg-black/45 flex items-center">
+            <div class="max-w-3xl mx-auto px-6 text-white">
+              <h1 class="text-3xl sm:text-5xl font-bold mb-4">Well Ring Solutions</h1>
+              <p class="text-lg sm:text-xl mb-6 text-white/90">Precision cast concrete rings for stable, long‑lasting
+                groundwater structures.</p>
+              <a href="#quote"
+                class="inline-block bg-accent hover:bg-brand-600 hover:text-white text-gray-900 font-semibold px-6 py-3 rounded-md shadow-lg transition-colors">Get
+                Quote</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2: Water Tank -->
+        <div class="relative w-full shrink-0 h-full" data-carousel-slide aria-label="Water Tank Construction"
+          aria-hidden="true">
+          <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('assets/img/water_tank_construction.jpg');"></div>
+          <div class="absolute inset-0 bg-black/45 flex items-center">
+            <div class="max-w-3xl mx-auto px-6 text-white">
+              <h2 class="text-3xl sm:text-5xl font-bold mb-4">Water Tank Construction</h2>
+              <p class="text-lg sm:text-xl mb-6 text-white/90">Durable storage solutions promoting water quality and low
+                maintenance.</p>
+              <a href="#services"
+                class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-md shadow-lg transition-colors">View
+                Service</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3: Wastage Tank -->
+        <div class="relative w-full shrink-0 h-full" data-carousel-slide aria-label="Wastage Tank Installation"
+          aria-hidden="true">
+          <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('assets/img/wastage_tank_installation.jpg');">
+          </div>
+          <div class="absolute inset-0 bg-black/45 flex items-center">
+            <div class="max-w-3xl mx-auto px-6 text-white">
+              <h2 class="text-3xl sm:text-5xl font-bold mb-4">Wastage Tank Installation</h2>
+              <p class="text-lg sm:text-xl mb-6 text-white/90">Leak‑resistant wastewater containment engineered for site
+                conditions.</p>
+              <a href="#services"
+                class="inline-block bg-accent hover:bg-brand-600 hover:text-white text-gray-900 font-semibold px-6 py-3 rounded-md shadow-lg transition-colors">Our
+                Tanks</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4: Septic Tank -->
+        <div class="relative w-full shrink-0 h-full" data-carousel-slide aria-label="Septic Tank Systems"
+          aria-hidden="true">
+          <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('assets/img/septic_tank_systems.jpg');">
+          </div>
+          <div class="absolute inset-0 bg-black/45 flex items-center">
+            <div class="max-w-3xl mx-auto px-6 text-white">
+              <h2 class="text-3xl sm:text-5xl font-bold mb-4">Septic Tank Systems</h2>
+              <p class="text-lg sm:text-xl mb-6 text-white/90">Reliable on‑site sanitation with structured access for
+                future servicing.</p>
+              <a href="#services"
+                class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-md shadow-lg transition-colors">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button type="button"
+        class="absolute left-4 bottom-4 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 text-white w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-500"
+        data-carousel-prev aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button type="button"
+        class="absolute right-4 bottom-4 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 text-white w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-500"
+        data-carousel-next aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+      <!-- Indicators -->
+      <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-3" data-carousel-indicators></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div class="relative group">
+          <div class="overflow-hidden rounded-xl shadow-md">
+            <img src="https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=1200&q=80"
+              alt="Construction team reviewing architectural plans"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div class="absolute inset-0 rounded-xl ring-1 ring-brand-600/30 pointer-events-none"></div>
+        </div>
+        <!-- Text -->
+        <div>
+          <p class="text-xs tracking-widest font-semibold text-brand-600 mb-3">ABOUT MANJUNATHA WELL RING WORKS</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Well Ring & Tank Installation Services</h2>
+          <p class="text-gray-700 mb-4">Units are cast with controlled mixes, proper reinforcement and careful curing.
+            We advise sizing, then handle excavation, placement, alignment, joint sealing and backfilling to suit site
+            and drainage.</p>
+          <p class="text-gray-700 mb-6">Focused on durability, safe installation, timely delivery and reduced waste.
+            Full support from sizing to after-care—contact us for a quick quote.</p>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-3 py-1.5 rounded-md"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v9.75a1.5 1.5 0 001.5 1.5h3.75v-4.5a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5v4.5h3.75a1.5 1.5 0 001.5-1.5V9.75" />
+              </svg>Quality</span>
+            <span
+              class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-3 py-1.5 rounded-md"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.5" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>Safety</span>
+            <span
+              class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-3 py-1.5 rounded-md"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.5" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l2.846-.813A8.25 8.25 0 1015.75 9a8.225 8.225 0 00-5.937 6.904z" />
+              </svg>Innovation</span>
+            <span
+              class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 text-sm font-medium px-3 py-1.5 rounded-md"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.5" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>Timely Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <p class="text-xs tracking-widest font-semibold text-brand-600 mb-2">OUR PRODUCTS & SERVICES</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ring & Tank Solutions</h2>
+        <p class="max-w-2xl mx-auto text-gray-600">We specialize in precast concrete rings and durable tank solutions
+          designed for reliability, ease of installation, and long service life.</p>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Well Ring -->
+        <div
+          class="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1608571424404-4e87006e65a1?auto=format&fit=crop&w=800&q=80"
+              alt="Concrete well rings stacked at yard"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Well Ring</h3>
+            <p class="text-sm text-gray-600">Precision cast well rings enabling stable, clean and long-lasting
+              groundwater access structures.</p>
+          </div>
+        </div>
+        <!-- Water Tank -->
+        <div
+          class="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80"
+              alt="Overhead water storage tank structure"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Water Tank</h3>
+            <p class="text-sm text-gray-600">Durable water tank solutions built for hygienic storage and minimal
+              maintenance.</p>
+          </div>
+        </div>
+        <!-- Wastage Tank -->
+        <div
+          class="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604311795833-c8d6f91b3b8a?auto=format&fit=crop&w=800&q=80"
+              alt="Wastewater treatment concrete tank"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Wastage Tank</h3>
+            <p class="text-sm text-gray-600">Sturdy containment for wastewater processing with reinforced leak-resistant
+              construction.</p>
+          </div>
+        </div>
+        <!-- Septic Tank -->
+        <div
+          class="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1626201323121-7b1e03dfbba3?auto=format&fit=crop&w=800&q=80"
+              alt="Installation of concrete septic tank sections"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Septic Tank</h3>
+            <p class="text-sm text-gray-600">Reliable on-site sanitation systems engineered for structural integrity and
+              easy servicing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <p class="text-xs tracking-widest font-semibold text-brand-600 mb-2">OUR PROJECTS</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Highlighted Works</h2>
+        <p class="max-w-2xl mx-auto text-gray-600">A sample of diverse project categories we execute. Real portfolio
+          images and metrics will replace these placeholders later.</p>
+      </div>
+      <!-- Project Grid -->
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Project Card 1 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=900&q=80"
+              alt="Bridge infrastructure construction"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">River Span Bridge</h3>
+              <p class="text-xs text-white/80">Structural & Civil</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">Multi-span reinforced concrete bridge ensuring resilient
+              transportation connectivity and flood mitigation.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>12 Months</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.25 6.75h12M6.75 9.75h12m-10.5 3h12M5.25 16.5h12" />
+                </svg>Turnkey</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project Card 2 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+            <img src="https://images.unsplash.com/photo-1581091012184-5c1d7b3e9f89?auto=format&fit=crop&w=900&q=80"
+              alt="Industrial plant construction"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">Processing Facility</h3>
+              <p class="text-xs text-white/80">Industrial Engineering</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">High-efficiency layout integrating safety zones, optimized logistics,
+              and scalable production modules.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 13.5h15m-15 0a3 3 0 013-3h5.25a3 3 0 013 3m-11.25 0v6a2.25 2.25 0 002.25 2.25h10.5A2.25 2.25 0 0021 19.5v-6m-18.75 0V8.25M21 13.5V8.25m0 0a2.25 2.25 0 00-2.25-2.25h-4.5m-6 0H5.25A2.25 2.25 0 003 8.25m7.5-2.25h3" />
+                </svg>Safety Grade A</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>Certified</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project Card 3 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+            <img src="https://images.unsplash.com/photo-1504307651750-4d75ce6fbe42?auto=format&fit=crop&w=900&q=80"
+              alt="Modern mixed-use building"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">Mixed-Use Complex</h3>
+              <p class="text-xs text-white/80">Commercial & Residential</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">Integrated retail, workspace, and living environments maximizing space
+              utility and comfort.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4" />
+                </svg>42 Units</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.651 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.862 4.487zm0 0L19.5 7.125" />
+                </svg>Modern Design</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project Card 4 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+
+
+            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80"
+              alt="Highway expansion project"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">Expressway Upgrade</h3>
+              <p class="text-xs text-white/80">Transport Network</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">Capacity expansion and resurfacing initiative improving regional
+              logistics efficiency and safety.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>8 Months</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>Multi-phase</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project Card 5 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+            <img src="https://images.unsplash.com/photo-1531834685032-c34ea6d5f9a6?auto=format&fit=crop&w=900&q=80"
+              alt="Eco-friendly development project"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">Green Campus</h3>
+              <p class="text-xs text-white/80">Sustainability Focus</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">Low-carbon design incorporating solar arrays, rainwater systems, and
+              recycled aggregates.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>10 Months</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.813 15.904L9 18.75l2.846-.813A8.25 8.25 0 1015.75 9a8.225 8.225 0 00-5.937 6.904z" />
+                </svg>Energy Smart</span>
+            </div>
+          </div>
+        </article>
+        <!-- Project Card 6 -->
+        <article
+          class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md border border-gray-200 transition-shadow">
+          <div class="relative h-56">
+            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80"
+              alt="Urban overpass project at dusk"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-white">
+              <h3 class="font-semibold text-lg">Urban Overpass</h3>
+              <p class="text-xs text-white/80">City Mobility</p>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-4">Elevated traffic solution reducing congestion and improving emergency
+              response routing.</p>
+            <div class="flex items-center gap-3 text-xs text-gray-500">
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>Quality Assured</span>
+              <span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8.25 6.75h12M6.75 9.75h12m-10.5 3h12M5.25 16.5h12" />
+                </svg>Phase II Ready</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-xs tracking-widest font-semibold text-brand-600 mb-2">IMAGE GALLERY</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Gallery</h2>
+        <p class="max-w-2xl mx-auto text-gray-600">A quick look at typical well rings, installation stages and tank
+          components we handle. More authentic site photos can be added later.</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1608571424404-4e87006e65a1?auto=format&fit=crop&w=800&q=80"
+              alt="Stacked concrete well rings at yard"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Precast well rings ready for transport.</figcaption>
+        </figure>
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80"
+              alt="Concrete water tank structural form"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Water tank formwork and reinforcement.</figcaption>
+        </figure>
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1604311795833-c8d6f91b3b8a?auto=format&fit=crop&w=800&q=80"
+              alt="Wastewater tank concrete section"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Wastewater containment section curing.</figcaption>
+        </figure>
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1626201323121-7b1e03dfbba3?auto=format&fit=crop&w=800&q=80"
+              alt="Septic tank installation excavation"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Excavation prepared for septic system.</figcaption>
+        </figure>
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=800&q=80"
+              alt="Team reviewing installation plans"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Site planning for ring placement.</figcaption>
+        </figure>
+        <figure class="group rounded-lg overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1531834685032-c34ea6d5f9a6?auto=format&fit=crop&w=800&q=80"
+              alt="Eco friendly water system components"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <figcaption class="p-4 text-sm text-gray-600">Components staged for efficient install.</figcaption>
+        </figure>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="#"
+          class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-6 py-3 rounded-md shadow-sm transition-colors"
+          aria-label="See more gallery images">See More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 md:gap-14 md:grid-cols-4">
+        <!-- Brand / Mission -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="assets/img/logo.png" alt="Manjunatha Well Ring Works logo" class="h-14 w-auto" />
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed">Supplying & installing precast concrete well rings, water
+            tanks, wastage tanks and septic tanks with durable materials, accurate sizing and timely service.</p>
+        </div>
+        <!-- Quick Links -->
+        <nav aria-label="Footer navigation" class="text-sm">
+          <h4 class="font-semibold text-white mb-4 text-base">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="#quote" class="hover:text-white transition-colors">Request Quote</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- Contact Info -->
+        <div class="text-sm">
+          <h4 class="font-semibold text-white mb-4 text-base">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mt-0.5 text-brand-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <span class="leading-relaxed uppercase">GONIBEEDU, MUDIGERE,<br />CHIKKAMAGALURU, KARNATAKA</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-brand-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 6.75v10.5a2.25 2.25 0 002.25 2.25h15a2.25 2.25 0 002.25-2.25V6.75m-19.5 0A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25m-19.5 0l9.435 6.623a1.125 1.125 0 001.28 0L21.75 6.75" />
+              </svg>
+              <a href="mailto:info@manjunadha.com" class="hover:text-white transition-colors">info@manjunadha.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-brand-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 4.5c0-.621.504-1.125 1.125-1.125h3.084c.489 0 .91.324 1.04.792l1.103 4.145a1.125 1.125 0 01-.524 1.255l-2.317 1.39a11.48 11.48 0 005.31 5.31l1.39-2.317a1.125 1.125 0 011.255-.524l4.145 1.102c.468.13.792.551.792 1.04v3.084c0 .621-.504 1.125-1.125 1.125H18.75C10.55 21.375 2.625 13.45 2.625 5.25V4.5z" />
+              </svg>
+              <div class="flex flex-col">
+                <a href="tel:+918086545025" class="hover:text-white transition-colors">+91 8086545025</a>
+                <a href="tel:+918075520472" class="hover:text-white transition-colors">+91 8075520472</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 text-brand-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3v3m6 12h3m-3-6h3M4 21h16a1 1 0 001-1v-8.379a1 1 0 00-.553-.894l-7-3.5a1 1 0 00-.894 0l-7 3.5A1 1 0 004 13.621V20a1 1 0 001 1z" />
+              </svg>
+              <span>Mon - Sat: 9:00 AM – 6:30 PM</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Newsletter / CTA -->
+        <div class="text-sm">
+          <h4 class="font-semibold text-white mb-4 text-base">Stay Informed</h4>
+          <p class="text-gray-400 mb-4">Get updates when new project case studies are published.</p>
+          <form action="#" onsubmit="event.preventDefault();" class="space-y-3">
+            <div class="flex gap-2">
+              <input type="email" required placeholder="Your email"
+                class="w-full rounded-md bg-gray-800 border border-gray-700 px-3 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+              <button type="submit"
+                class="rounded-md bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 shadow-sm transition-colors">Subscribe</button>
+            </div>
+            <p class="text-xs text-gray-500">We respect your privacy.</p>
+          </form>
+        </div>
+      </div>
+      <div
+        class="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row gap-4 md:gap-0 md:items-center md:justify-between text-xs text-gray-500">
+        <div>© <span id="year"></span> Manjunatha Well Ring Works. All rights reserved.</div>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="hover:text-gray-300">Privacy</a>
+          <a href="#" class="hover:text-gray-300">Terms</a>
+          <a href="#" class="hover:text-gray-300">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
