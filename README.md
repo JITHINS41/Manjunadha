@@ -1,4 +1,4 @@
-# MANJUNADHA Construction Website
+# MANJUNADHA Construction Website Version 1.0.0.0
 
 A modern responsive landing scaffold for MANJUNADHA construction company using Tailwind CSS (CDN) + vanilla JavaScript.
 
